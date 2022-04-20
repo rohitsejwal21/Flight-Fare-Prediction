@@ -7,8 +7,6 @@ import pandas as pd
 app = Flask(__name__)
 model = pickle.load(open("flight_rf_model.pkl", "rb"))
 
-
-
 @app.route("/")
 @cross_origin()
 def home():
@@ -360,8 +358,6 @@ def predict():
 
 
     return render_template("home.html")
-
-
 
 
 if __name__ == "__main__":
